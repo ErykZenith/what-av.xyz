@@ -1,8 +1,17 @@
 ---
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
+import characters from "../assets/characters.png";
+import { Image } from "astro:assets";
 ---
 
-<Layout>
-	<Welcome />
+<!-- <Counter client:load /> -->
+<Layout title="main">
+	<div class="w-full h-screen overflow-hidden flex relative select-none">
+		<Image
+			class="w-full h-250 sm:w-auto sm:h-auto absolute object-cover z-10"
+			src={characters}
+			alt="characters."
+			draggable="false"
+		/>
+	</div>
 </Layout>
